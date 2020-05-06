@@ -362,6 +362,7 @@ if (typeof(tbParanoia) === "undefined") {
 		paranoiaIsHostLocal: function(hostname) {
 			hostname = hostname.replace(/[\[\]]/,'');
 			if(hostname == 'localhost') return true;
+			if(hostname == 'localhost.localdomain') return true;
 			if(hostname == '127.0.0.1') return true;
 			if(hostname == 'ip6-localhost') return true;
 			if(hostname == 'Internal') return true;
